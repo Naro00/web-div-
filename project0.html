@@ -1,0 +1,115 @@
+<h1 class = "head1", id = "title">속성(attribute)는 띄어쓰기로 구분 예). id, hrep</h1> 
+<style>
+    .head1 {
+        width: 500px;
+    }
+    .p2 {
+        width: 300px;
+    }
+</style>
+<p class = "p1">태그는 중첩이 가능하다.</p>
+<p class = "p2">종료 태그가 없는 '빈 태그'도 존재한다. 예). 브라우저가 직접 내용을 그려야하는 경우</p>
+<!--이건 주석이야-->
+<h1 id = "top">narosuper</h1> <!--제목 태그, 숫자가 높아질수록 낮은 수준의 소제목이 된다.-->
+<p>이건 단락이야</p> <!--단락을 나타내는 태그-->
+<p>단락 태그를 여러개 넣으면 단락을 나눌수 있지용 <br>
+    br 태그를 이용하면 p 태그 내부에서 줄 바꿈이 이뤄지지요<br> <!--line break = br-->
+    b 태그 = 글자 굵게, i = 이탤릭체, u = 글자에 밑줄, s = 글자에 중간선을 표현한다 <br>
+    그 외에도 더 있어요. <br>
+    중요한 내용 = strong , 강조 = em, 새롭게 추가된 = ins, 삭제된 = del <br>
+    모양은 같아 보일지 몰라도 컴퓨터가 인식하는 의미가 다르다.
+</p>
+<a href="http://www.morg.kr">앵커 태그는 링크를 생성하지요</a>
+<p>
+    앵커에는 속성이 많아요 <br>
+    target="_self" : 우리가 보고 있던 페이지에 다른 페이지를 불러온다 <br>
+    target="_blank" : 새로운 창으로 다른 페이지를 불러온다. <br>
+    다른 속성을 더 찾아보자 <br>
+    앵커는 외부 이동만 하는것이 아닌 내부 이동도 한다.<br>
+    이때는 href ="# id 값" 을 넣는다.
+</p>
+<div> <!--별다른 의미없이 요소를 묶기 위해 사용 된는 태그들-->
+    <span>naro</span> daon  <!--div는 블록레벨, span은 라인레벨이다.-->
+</div>
+<p>
+    리스트 태그
+</p>
+<ul> <!--unordered list 순서가 없는 리스트-->
+    <li>콩나물</li> <!--리스트를 나타내는 태그-->
+    <li>파</li>
+    <li>간장</li>
+</ul>
+<ol>   <!--ordered list 순서가 있는 리스트-->
+    <li>금</li>
+    <li>토</li>
+    <li>일</li>           <!--li 태그 안에는 다른 태그들이 자식태그로 중첩될수 있다.-->
+    <li>주말
+        <ul>
+            <li>늦잠자기</li>
+            <li>맛난거먹기</li>
+        </ul>
+    </li>
+</ol>
+<dl>  <!--discripsion list 용어 설명 리스트-->
+    <dt>피그말리온 효과</dt> <!--definition term 용어 구분-->
+    <dd>타인의 기대나 관심으로 인하여 능률이 오르거나 결과가 좋아지는 현상</dd> <!--definition description 용어 정의-->
+    <dd>의미가 여러개면 중첩할 수도 있지용</dd>
+</dl>
+<img src="" alt="피자"> <!--이미지 삽입태그, src = 이미지 경로, alt = 이미지의 태체 택스트 / 고정적인 이미지 경우, width, height 이용-->
+<!--src에는 상대 경로와 절대 경로가 존재한다.-->
+<table> <!--테이블을 만드는 태그-->
+    <tr> <!--column을 나타내는 태그-->
+        <td></td><td></td><td></td> <!--한 row에 있는 cell을 나타내는 태그-->
+    </tr>
+    <tr>
+        <td></td><td></td><td></td>
+    </tr>
+</table>
+<style media="screen">
+    td,th{border: 1px solid; width: 50px; height: 50px}
+    
+</style>
+<table>
+    <caption>Monthly Savings</caption>  <!--표의 제목-->
+    <thead>  <!--열의 머리글-->
+        <tr><th>Month</th><th>Savings</th></tr>  <!--th는 좀 더 굵게 나타내고 열의 머리글임을 의미함-->
+    </thead>   
+    <tfoot>    <!--바닥행 그룹-->
+        <tr><td colspan="2">Sum</td></tr> <!--셀을 가로방향으로 몇개 병합-->
+    </tfoot>
+    <tbody> <!--본문행 그룹-->
+        <tr><td>January</td><td>100$</td></tr>
+        <tr><td>February</td><td rowspan="2">80$</td></tr> <!--셀을 세로방향으로 몇개 병합-->
+        <tr><td>March</td></tr>
+    </tbody>
+</table>
+<p>폼 요소 = 서버에 데이터를 전달하기 위한 요소</p>
+아이디 : <input type="text" placeholder="아이디를 적어주세요."> <br> <!--다양한 타입의 속성으로 여러 종류의 입력 양식으로 나타난다.-->
+비밀번호 : <input type="password">
+<label for="male">남자</label><input type="radio" name="gender" id="male">, <label for="female">여자</label><input type="radio" name="gender" id="female"> <!--name으로 같은 속성의 버튼임을 알려줘야 한 버튼을 클릭하면 다른 버튼이 꺼진다.-->
+<input type="checkbox" checked> <!--체크박스는 중복이 가능할때 주로 쓴다. checked를 쓰면 체크가 되서 나온다.-->
+<input type="file"> <br> <!--파일업로드-->
+<input type="submit"><br> <!--저장-->
+<input type="reset"> <!--초기화-->
+<input type="button"> <!--아무런 기본동작도 정해지지 않은 버튼-->
+<input type="image" src="" alt="" width="" height=""> <!--이미지를 바탕으로한 버튼 서브밋과 같이 값을 전송하는 능력을 가짐--><br>
+<p>select 태그와 요소</p><br>
+<select>
+    <option selected>월</option>
+    <option>화</option>
+    <option>수</option>
+</select><br>
+<p>textarea요소 : 사용자에게 여러줄의 택스트를 받고자 할때 사용</p> <br>
+자기소개 : <textarea></textarea> <br>
+<p>버튼 태그 : 버튼을 만듬, 인풋 태그의 요소와 달리 스타일적인 측면에서 더 자유롭게 표현 가능</p><br>
+<button></button><br>
+<p>레이블 요소는 폼 요소와 연결 시켜주기 위함으로 웹 접근성 향상에 도움이 되어 필수적이다.</p><br>
+<p>레이블의 for 속성과 인풋의 id 값이 같아야한다. 또한 레이블 태그는 레이블을 달고자 하는 인풋 앞에 놓아야 기능을 한다.</p><br>
+<fieldset>   <!--폼 요소를 그룹화 하여 구조적으로 만듬-->
+    <legend> <!--폼 요소의 제목, 필드셋의 자식 태그로 가장 먼저 선어 되어야 한다.-->
+
+    </legend>
+</fieldset>
+<p>form 태그는 폼 데이터를 그룹화 하는 가장 큰 단위, 그룹화 해서 서버에 전송한다.</p><br>
+<p>action 은 폼 데이터를 처리하는 서버의 주소가 들어가는 요소, method 는 데이터를 전송하는 방식을 지정한다(get or post).</p><br>
+<p>get 방식은 민감한 정보를 전달하는 곳에는 쓰면 안된다. url 뒤에 그 내용이 나오기 때문이다.</p>

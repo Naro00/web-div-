@@ -1,0 +1,43 @@
+<!DOCTYPE html>    <!--어떤 타입의 문서인지-->
+<html lang="ko">   <!--어떤 언어로 이루어 졌는지 나타내는 속성 lang-->
+    <head>    <!--문서의 기본정보 설정, 외부 파일, 자바스크립트 연결-->
+        <meta charset="UTF-8">    <!--인코딩-->
+        <title>HTML</title>    <!--문서의 제목, 탭바에 나타남-->
+        <style media="screen">
+            td{border: 1px solid; width: 50px; height: 50px}
+        </style>
+    </head>
+    <body>
+        <h1>목요일</h1>
+        <h2>목요일은 금요일 같다</h2>
+        <p>근데 금요일이 아니라는게 함정이죠.<br>
+            <b>목요일</b> <i>금요일</i> 토요일 <br>
+            <u>일요일</u> <s>월요일</s> 
+        </p>
+        <a href="https://morg.modoo.at/">회사</a>
+        <table>
+            <tr> 
+                <td></td><td></td><td></td> 
+            </tr>
+            <tr>
+                <td></td><td></td><td></td>
+            </tr>
+        </table>
+        <form action="/test.html">
+            <input type="checkbox" checked> <!--체크박스는 중복이 가능할때 주로 쓴다. checked를 쓰면 체크가 되서 나온다.-->
+            <input type="file"> <br> <!--파일업로드-->
+            <input type="submit" value="전송"><br> <!--저장-->
+            <input type="reset" value="취소"> <!--초기화-->
+            <input type="button" value="등록">
+            <button type="reset">초기화</button>
+            <fieldset>
+                <legend>기본정보</legend>
+                <label for="userid">아이디:</label><input type="text" placeholder="아이디를 적어주세요." id="userid"> <br> <!--다양한 타입의 속성으로 여러 종류의 입력 양식으로 나타난다.-->
+            비밀번호 : <input type="password">
+            <label for="male">남자</label><input type="radio" name="gender" id="male">, <label for="female">여자</label><input type="radio" name="gender" id="female">
+            </fieldset>
+        </form>
+        <textarea cols="30" rows="5" placeholder="문의내용"></textarea><br>
+        
+    </body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="KO">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+        <link rel="stylesheet" href="desing.css">
+        <!--<style>
+            body {background-color: bisque;}
+            .hidden {display: none;}
+            #clock {color: rgb(255, 68, 1);}
+        </style>-->
+        <title>MORG</title>
+    </head>
+</html>
+<body>
+    <form class="hidden" id="loginform">   <!--id 유효성 확인을 위해서는 인풋이 폼 안에 있어야 한다.-->
+        <input
+        required    
+        maxlength="15"
+        type="text" placeholder="What is your name?"/> <!--조건을 충족하지 않으면 경고가 뜸-->
+        <button>Log in</button>
+    </form>
+    <div id="weather">
+        <span></span>
+        <span></span>
+    </div>
+    <h1 id="hello" class="hidden"></h1>
+    <h2 id="clock">00:00</h2>
+    <form id="todo-form">
+        <input type="text" placeholder="Write a TO Do" required>
+    </form>
+    <ul id="todo-list"></ul>
+    <div id="quotes">
+        <span></span><br>
+        <span></span>
+    </div>
+    <script src="semantic/dist/semantic.min.js"></script>
+    <script src="web.js"></script>
+    <script src="web_clock.js"></script>
+    <script src="web_quotes.js"></script>
+    <script src="web_todo.js"></script>
+    <script src="web_weather.js"></script>
+</body>

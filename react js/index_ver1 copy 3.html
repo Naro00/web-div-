@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        <div id="root"></div>
+    </body>
+    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel">
+        const root = document.getElementById("root");
+        function APP() {
+            const [counter, setCounter] = React.useState(0); // counter함수와 render 함수의 역할을 모두 함 setCounter=modifile 가 ui 리셋 역할도 해준다.
+            const onClick = () => {
+                setCounter((current) => current+1); //현재 값을 받아서 업데이트 시키는 방법
+            }
+            return(
+                <div> 
+                    <h3>Total clicks 0</h3>
+                    <button onClick={onClick}>click here</button>
+                </div>
+            );    
+        };
+        ReactDOM.render(<APP/>, root);
+    </script>
+</html>

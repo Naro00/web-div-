@@ -1,0 +1,30 @@
+body {
+    text-align: center;
+    background-color: rgb(245, 255, 151);
+} 
+.hidden {display: none;}
+#clock {color: rgb(11, 50, 178);
+    margin-top: 50px;
+    font-size: 50px;
+    opacity: 50%;
+}
+
+#hello {
+    color: rgb(81, 127, 235);
+    margin-top: 100px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 100px;
+
+}
+#todo-form {
+    
+}
+
+#weather {
+    margin-top: 100px;
+}
+
+#todo-list {
+    width: 100px;
+    padding-left: 425px;
+}
